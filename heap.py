@@ -41,7 +41,7 @@ class Heap:
                 if child[i] != -1 and self._list[child[i]] < min_child:
                     min_child_index = child[i]
                     min_child = self._list[child[i]]
-            if min_child == 9999999999999999999999999:
+            if min_child == float("inf"):
                 break
             if self._list[index] > self._list[min_child_index]:
                 self._list[index], self._list[min_child_index] = self._list[min_child_index], self._list[index]
